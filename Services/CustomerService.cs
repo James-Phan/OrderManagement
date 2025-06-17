@@ -9,9 +9,11 @@ namespace OrderManagement.Services
     public class CustomerService : ICustomerService
     {
         private readonly ICustomerRepository _repo;
-        public CustomerService(ICustomerRepository repo)
+        private readonly ILogger<CustomerService> _logger;
+        public CustomerService(ICustomerRepository repo, ILogger<CustomerService> logger)
         {
             _repo = repo;
+            _logger = logger;
         }
 
         public async Task<IEnumerable<CustomerDto>> GetAllAsync()
@@ -48,6 +50,7 @@ namespace OrderManagement.Services
                 PhoneNumber = dto.PhoneNumber
             };
             await _repo.AddAsync(customer);
+            _logger.LogInformation("Created new customer: {CustomerId} - {FullName}", customer.CustomerId, customer.FullName);
             return new CustomerDto
             {
                 CustomerId = customer.CustomerId,
@@ -60,19 +63,29 @@ namespace OrderManagement.Services
         public async Task<bool> UpdateAsync(int id, CustomerUpdateDto dto)
         {
             var customer = await _repo.GetByIdAsync(id);
-            if (customer == null) return false;
+            if (customer == null)
+            {
+                _logger.LogWarning("Update failed: Customer {CustomerId} not found", id);
+                return false;
+            }
             customer.FullName = dto.FullName;
             customer.Email = dto.Email;
             customer.PhoneNumber = dto.PhoneNumber;
             await _repo.UpdateAsync(customer);
+            _logger.LogInformation("Updated customer: {CustomerId}", id);
             return true;
         }
 
         public async Task<bool> DeleteAsync(int id)
         {
             var exists = await _repo.ExistsAsync(id);
-            if (!exists) return false;
+            if (!exists)
+            {
+                _logger.LogWarning("Delete failed: Customer {CustomerId} not found", id);
+                return false;
+            }
             await _repo.DeleteAsync(id);
+            _logger.LogInformation("Deleted customer: {CustomerId}", id);
             return true;
         }
     }
