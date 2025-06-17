@@ -57,17 +57,32 @@ namespace OrderManagement.Controllers
         public async Task<IActionResult> Update(int id, [FromBody] CustomerUpdateDto dto)
         {
             _logger.LogInformation("Request: Update customer {CustomerId}", id);
-            if (!ModelState.IsValid) return BadRequest(ModelState);
+            if (!ModelState.IsValid)
+            {
+                _logger.LogWarning("Update customer failed: invalid model for {CustomerId}", id);
+                return BadRequest(ModelState);
+            }
             var success = await _service.UpdateAsync(id, dto);
-            if (!success) return NotFound();
+            if (!success)
+            {
+                _logger.LogWarning("Update customer failed: customer {CustomerId} not found", id);
+                return NotFound();
+            }
+            _logger.LogInformation("Updated customer {CustomerId}", id);
             return NoContent();
         }
 
         [HttpDelete("{id}")]
         public async Task<IActionResult> Delete(int id)
         {
+            _logger.LogInformation("Request: Delete customer {CustomerId}", id);
             var success = await _service.DeleteAsync(id);
-            if (!success) return NotFound();
+            if (!success)
+            {
+                _logger.LogWarning("Delete customer failed: customer {CustomerId} not found", id);
+                return NotFound();
+            }
+            _logger.LogInformation("Deleted customer {CustomerId}", id);
             return NoContent();
         }
     }
