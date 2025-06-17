@@ -1,9 +1,12 @@
 using Microsoft.EntityFrameworkCore;
 using OrderManagement.Models;
+using Microsoft.OpenApi.Models;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
+
+builder.Services.AddControllers();
 // Đăng ký DbContext sử dụng SQL Server
 builder.Services.AddDbContext<OrderManagement.Models.OrderManagementContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
@@ -18,18 +21,21 @@ builder.Services.AddScoped<OrderManagement.Services.ICustomerService, OrderManag
 builder.Services.AddScoped<OrderManagement.Services.IProductService, OrderManagement.Services.ProductService>();
 builder.Services.AddScoped<OrderManagement.Services.IOrderService, OrderManagement.Services.OrderService>();
 
-// Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
-builder.Services.AddOpenApi();
+// Add Swagger services
+builder.Services.AddEndpointsApiExplorer();
+builder.Services.AddSwaggerGen();
+
+builder.Services.AddAuthorization();
 
 var app = builder.Build();
 
-// Configure the HTTP request pipeline.
-if (app.Environment.IsDevelopment())
-{
-    app.MapOpenApi();
-}
+// Enable Swagger middleware
+app.UseSwagger();
+app.UseSwaggerUI();
 
 app.UseHttpsRedirection();
+app.UseAuthorization();
+app.MapControllers();
 
 var summaries = new[]
 {
