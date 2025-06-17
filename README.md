@@ -30,6 +30,32 @@ Hệ thống quản lý đơn hàng (Order Management System) sử dụng ASP.NE
 7. **Mở trình duyệt truy cập Swagger UI:**
    - `https://localhost:5001/swagger` hoặc `http://localhost:5000/swagger`
 
+## Logging
+The project uses ASP.NET Core built-in logging (`ILogger<T>`) for all services and controllers.
+
+- **Where logs are written:**
+  - By default, logs are output to the console.
+  - You can configure output (console, file, etc.) in `appsettings.json` under the `Logging` section.
+- **What is logged:**
+  - All important CRUD operations on Customers, Orders, Products (create, update, delete, get, errors...)
+  - Warnings for invalid input or not found cases.
+- **How to change log level:**
+  - Edit the `Logging` section in `appsettings.json`:
+    ```json
+    "Logging": {
+      "LogLevel": {
+        "Default": "Information",
+        "Microsoft.AspNetCore": "Warning",
+        "OrderManagement": "Information"
+      }
+    }
+    ```
+- **Sample log in code:**
+    ```csharp
+    _logger.LogInformation("Created customer {CustomerId}", result.CustomerId);
+    _logger.LogWarning("Delete customer failed: customer {CustomerId} not found", id);
+    ```
+
 ## Test API
 - Sử dụng Swagger UI hoặc Postman để test các endpoint
 - Các endpoint chính:
