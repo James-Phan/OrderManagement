@@ -147,6 +147,7 @@ D:\WORKING\SOURCECODE\Interview net 8\OrderManagement\obj\Debug\net9.0\OrderMana
 D:\WORKING\SOURCECODE\Interview net 8\OrderManagement\obj\Debug\net9.0\OrderManagement.csproj.CoreCompileInputs.cache
 D:\WORKING\SOURCECODE\Interview net 8\OrderManagement\obj\Debug\net9.0\OrderManagement.MvcApplicationPartsAssemblyInfo.cs
 D:\WORKING\SOURCECODE\Interview net 8\OrderManagement\obj\Debug\net9.0\OrderManagement.MvcApplicationPartsAssemblyInfo.cache
+D:\WORKING\SOURCECODE\Interview net 8\OrderManagement\obj\Debug\net9.0\OrderManagement.sourcelink.json
 D:\WORKING\SOURCECODE\Interview net 8\OrderManagement\obj\Debug\net9.0\scopedcss\bundle\OrderManagement.styles.css
 D:\WORKING\SOURCECODE\Interview net 8\OrderManagement\obj\Debug\net9.0\staticwebassets.build.json
 D:\WORKING\SOURCECODE\Interview net 8\OrderManagement\obj\Debug\net9.0\staticwebassets.development.json
@@ -163,3 +164,7 @@ D:\WORKING\SOURCECODE\Interview net 8\OrderManagement\obj\Debug\net9.0\refint\Or
 D:\WORKING\SOURCECODE\Interview net 8\OrderManagement\obj\Debug\net9.0\OrderManagement.pdb
 D:\WORKING\SOURCECODE\Interview net 8\OrderManagement\obj\Debug\net9.0\OrderManagement.genruntimeconfig.cache
 D:\WORKING\SOURCECODE\Interview net 8\OrderManagement\obj\Debug\net9.0\ref\OrderManagement.dll
+D:\WORKING\SOURCECODE\Interview net 8\OrderManagement\bin\Debug\net9.0\Swashbuckle.AspNetCore.Swagger.dll
+D:\WORKING\SOURCECODE\Interview net 8\OrderManagement\bin\Debug\net9.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+D:\WORKING\SOURCECODE\Interview net 8\OrderManagement\bin\Debug\net9.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+D:\WORKING\SOURCECODE\Interview net 8\OrderManagement\obj\Debug\net9.0\staticwebassets.upToDateCheck.txt
