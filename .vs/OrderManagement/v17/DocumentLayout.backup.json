@@ -1,0 +1,62 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\WORKING\\SOURCECODE\\Interview net 8\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{8136C8CD-AFEE-46D6-99B1-F75A02F51963}|OrderManagement\\OrderManagement.csproj|d:\\working\\sourcecode\\interview net 8\\ordermanagement\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8136C8CD-AFEE-46D6-99B1-F75A02F51963}|OrderManagement\\OrderManagement.csproj|solutionrelative:ordermanagement\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{606AE3A7-8E39-49AB-B85B-BD557C8CE98A}|OrderManagement.Tests\\OrderManagement.Tests.csproj|d:\\working\\sourcecode\\interview net 8\\ordermanagement.tests\\customerservicetests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{606AE3A7-8E39-49AB-B85B-BD557C8CE98A}|OrderManagement.Tests\\OrderManagement.Tests.csproj|solutionrelative:ordermanagement.tests\\customerservicetests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{0174dea2-fdbe-4ef1-8f99-c0beae78880f}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\WORKING\\SOURCECODE\\Interview net 8\\OrderManagement\\Program.cs",
+              "RelativeDocumentMoniker": "OrderManagement\\Program.cs",
+              "ToolTip": "D:\\WORKING\\SOURCECODE\\Interview net 8\\OrderManagement\\Program.cs",
+              "RelativeToolTip": "OrderManagement\\Program.cs",
+              "ViewState": "AgIAABQAAAAAAAAAAAAQwB4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-17T09:59:16.904Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "CustomerServiceTests.cs",
+              "DocumentMoniker": "D:\\WORKING\\SOURCECODE\\Interview net 8\\OrderManagement.Tests\\CustomerServiceTests.cs",
+              "RelativeDocumentMoniker": "OrderManagement.Tests\\CustomerServiceTests.cs",
+              "ToolTip": "D:\\WORKING\\SOURCECODE\\Interview net 8\\OrderManagement.Tests\\CustomerServiceTests.cs",
+              "RelativeToolTip": "OrderManagement.Tests\\CustomerServiceTests.cs",
+              "ViewState": "AgIAAB4AAAAAAAAAAADwvygAAAAwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-17T09:56:28.008Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
